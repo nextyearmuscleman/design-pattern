@@ -8,8 +8,8 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
-
-        <module></module>
+        <module>study-strategy</module>
+        <module>study-strategy</module>
     </modules>
 
 </project>
