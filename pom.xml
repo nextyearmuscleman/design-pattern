@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
+        <module>study-prototype</module>
         <module>study-chainOfResponsibility</module>
         <module>study-factory</module>
         <module>study-strategy</module>
