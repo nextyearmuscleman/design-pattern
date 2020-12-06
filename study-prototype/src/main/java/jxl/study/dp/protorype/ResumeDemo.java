@@ -1,47 +1,54 @@
 package jxl.study.dp.protorype;
 
+
+import java.util.concurrent.TimeUnit;
+
 /**
- * 简历-- Prototype角色
+ * 简历-- ConcretePrototype角色
  * @author jixuelei
  * @date 2020/12/4
  */
-public class ResumeDemo implements Cloneable{
+public class ResumeDemo implements Cloneable {
     private String name;
-    private String birthday;
-    private String sex;
-    private String school;
-    private String timeArea;
-    private String company;
+    private int age;
+
 
     public ResumeDemo(String name) {
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         this.name = name;
     }
 
     @Override
-    public ResumeDemo clone() {
-        ResumeDemo resume = null;
+    protected ResumeDemo clone() {
+
+        ResumeDemo resumeDemo = null;
         try {
-            resume = (ResumeDemo) super.clone();
-        }catch (CloneNotSupportedException ex) {
+            resumeDemo = (ResumeDemo) super.clone();
+        }catch (CloneNotSupportedException ex){
             ex.printStackTrace();
         }
-        return resume;
+        return resumeDemo;
     }
 
-    public void setPersonInfo(String birthday, String sex, String school){
-        this.birthday = birthday;
-        this.sex = sex;
-        this.school = school;
+    public int getAge() {
+        return age;
     }
 
-    public void setWorkExperience(String timeArea,String company){
-        this.timeArea = timeArea;
-        this.company = company;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public void display(){
-        System.out.println("姓名：" + name);
-        System.out.println("生日:" + birthday + ",性别:" + sex + ",毕业学校：" + school);
-        System.out.println("工作年限:" + timeArea + ",公司:" + company);
+    public String getName() {
+        return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
 }

@@ -10,7 +10,8 @@
       * `Prototpe` 抽象原型类。声明克隆自身的接口。
       * `ConcretePrototype` 具体原型类。实现克隆的具体操作。
       * `Client` 客户类。让一个原型克隆自身，从而获得一个新的对象。
-   * 需要实现拷贝的Class类需要实现 Cloneable标识接口,若不实现改接口调用clone方法会抛出异常`  CloneNotSupportedException` 
+   * 需要实现拷贝的Class类需要实现 Cloneable标识接口,若不实现改接口调用clone方法会
+   抛出异常`  CloneNotSupportedException` 
    * 对任何的对象x，都有x.clone() !=x，即克隆对象与原对象不是同一个对象。
    * 对任何的对象x，都有x.clone().getClass()==x.getClass()，即克隆对象与原对象的类型一样。
    
